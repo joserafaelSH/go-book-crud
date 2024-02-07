@@ -1,0 +1,38 @@
+@hostname = http://localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+
+###
+POST {{host}}/book
+Content-Type: {{contentType}}
+
+{
+  
+  "name": "josdseraf123",
+  "author": "Rafa040500!",
+  "publication": "jose"
+}
+
+###
+GET {{host}}/book/1
+Content-Type: {{contentType}}
+Authorization: Bearer xxx
+
+
+###
+GET {{host}}/book
+Content-Type: {{contentType}}
+Authorization: Bearer xxx
+
+
+###
+PUT {{host}}/book/1
+Content-Type: {{contentType}}
+
+{
+  "user_name": "joserafael",
+  "author": "Rafa040500!",
+  "publication": "jose",
+}

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  books_db:
+    container_name: books_db
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: books_db
+      POSTGRES_PASSWORD: 12345678!
+      POSTGRES_DB: books_db
+    ports:
+      - 5433:5432
+    volumes:
+      - ./books_db:/var/lib/postgresql/data
